@@ -6,10 +6,11 @@ import {
   Typography,
   isWidthUp,
   withWidth,
-  withStyles
+  withStyles, Card
 } from "@material-ui/core";
 import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
+import DropImage from '../../../shared/components/Dropzone';
 
 const styles = theme => ({
   containerFix: {
@@ -28,6 +29,36 @@ const styles = theme => ({
     overflow: "hidden",
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1)
+  },
+  card: {
+    boxShadow: theme.shadows[4],
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("xs")]: {
+      paddingTop: theme.spacing(3),
+      paddingBottom: theme.spacing(3),
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: theme.spacing(5),
+      paddingBottom: theme.spacing(5),
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: theme.spacing(5.5),
+      paddingBottom: theme.spacing(5.5),
+      paddingLeft: theme.spacing(5),
+      paddingRight: theme.spacing(5),
+    },
+    [theme.breakpoints.up("lg")]: {
+      paddingTop: theme.spacing(6),
+      paddingBottom: theme.spacing(6),
+      paddingLeft: theme.spacing(6),
+      paddingRight: theme.spacing(6),
+    },
+    [theme.breakpoints.down("lg")]: {
+      width: "auto",
+    },
   },
   cardWrapper: {
     [theme.breakpoints.down("xs")]: {
@@ -50,95 +81,54 @@ function PricingSection(props) {
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
       <Typography variant="h3" align="center" className="lg-mg-bottom">
-        Pricing
+        DropZone
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
-        <Grid
-          container
-          spacing={calculateSpacing(width)}
-          className={classes.gridContainer}
+        <Card
+          className={classes.card}
+          data-aos-delay="200"
+          data-aos="zoom-in-up"
         >
           <Grid
-            item
-            xs={12}
-            sm={6}
-            lg={3}
-            className={classes.cardWrapper}
-            data-aos="zoom-in-up"
+            container
+            spacing={calculateSpacing(width)}
+            className={classes.gridContainer}
           >
-            <PriceCard
-              title="Starter"
-              pricing={
-                <span>
-                  $14.99
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              lg={3}
+              className={classes.cardWrapper}
+            // data-aos="zoom-in-up"
+            >
+              <DropImage >
+                Drop your image here
+                  </DropImage>
+            </Grid>
+            <Grid
+              item
+              className={classes.cardWrapperHighlighted}
+              xs={12}
+              sm={6}
+              lg={3}
+              // data-aos="zoom-in-up"
+              data-aos-delay="200"
+            >
+              <PriceCard
+                highlighted
+                title="Premium"
+                pricing={
+                  <span>
+                    $29.99
                   <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
+                  </span>
+                }
+                features={["Feature 1", "Feature 2", "Feature 3"]}
+              />
+            </Grid>
           </Grid>
-          <Grid
-            item
-            className={classes.cardWrapperHighlighted}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay="200"
-          >
-            <PriceCard
-              highlighted
-              title="Premium"
-              pricing={
-                <span>
-                  $29.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
-          <Grid
-            item
-            className={classes.cardWrapper}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay={isWidthUp("md", width) ? "400" : "0"}
-          >
-            <PriceCard
-              title="Business"
-              pricing={
-                <span>
-                  $49.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
-          <Grid
-            item
-            className={classes.cardWrapper}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay={isWidthUp("md", width) ? "600" : "200"}
-          >
-            <PriceCard
-              title="Tycoon"
-              pricing={
-                <span>
-                  $99.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
-        </Grid>
+        </Card>
       </div>
     </div>
   );

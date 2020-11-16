@@ -76,7 +76,7 @@ const styles = (theme) => ({
     boxShadow: theme.shadows[4],
   },
   container: {
-    marginTop: theme.spacing(6),
+    marginTop: theme.spacing(3),
     marginBottom: theme.spacing(12),
     [theme.breakpoints.down("md")]: {
       marginBottom: theme.spacing(9),
@@ -121,17 +121,17 @@ function HeadSection(props) {
                     >
                       <Box mb={4}>
                         <Typography
+                        color="textSecondary"
                           variant={isWidthUp("lg", width) ? "h3" : "h4"}
                         >
-                          Free Template for building an SaaS app using
-                          Material-UI
+                          Find your lookalike cartoon character
                         </Typography>
                       </Box>
                       <div>
                         <Box mb={2}>
                           <Typography
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
-                            color="textSecondary"
+                          
                           >
                             Lorem ipsum dolor sit amet, consetetur sadipscing
                             elitr, sed diam nonumy eirmod tempor invidunt

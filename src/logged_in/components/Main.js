@@ -152,7 +152,7 @@ function Main(props) {
     for (let i = 0; i < iterations; i += 1) {
       const randomTransactionTemplate =
         transactionTemplates[
-          Math.floor(Math.random() * transactionTemplates.length)
+        Math.floor(Math.random() * transactionTemplates.length)
         ];
       const transaction = {
         id: i,
@@ -231,7 +231,7 @@ function Main(props) {
 
   const selectDashboard = useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Dashboard";
+    // document.title = "WaVer - Dashboard";
     setSelectedTab("Dashboard");
     if (!hasFetchedCardChart) {
       setHasFetchedCardChart(true);
@@ -248,7 +248,7 @@ function Main(props) {
 
   const selectPosts = useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Posts";
+    // document.title = "WaVer - Posts";
     setSelectedTab("Posts");
     if (!hasFetchedEmojiTextArea) {
       setHasFetchedEmojiTextArea(true);
@@ -292,7 +292,7 @@ function Main(props) {
 
   const selectSubscription = useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Subscription";
+    // document.title = "WaVer - Subscription";
     setSelectedTab("Subscription");
   }, [setSelectedTab]);
 

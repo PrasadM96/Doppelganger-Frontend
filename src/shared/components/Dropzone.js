@@ -28,6 +28,7 @@ function getColor(isDragAccept, isDragReject, theme) {
 }
 
 function Dropzone(props) {
+
   const { onDrop, accept, fullHeight, children, classes, style, theme } = props;
   const {
     getRootProps,
@@ -35,7 +36,8 @@ function Dropzone(props) {
     isDragAccept,
     isDragReject
   } = useDropzone({
-    accept: accept,
+    multiple: false,
+    accept: 'image/jpeg, image/png,image/jpeg',
     onDrop: onDrop
   });
   return (

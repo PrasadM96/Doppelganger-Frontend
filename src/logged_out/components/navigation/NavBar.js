@@ -82,15 +82,15 @@ function NavBar(props) {
               display="inline"
               color="primary"
             >
-              Wa
+              Doppelganger
             </Typography>
             <Typography
-              variant="h4"
+              variant="h5"
               className={classes.brandText}
               display="inline"
               color="secondary"
             >
-              Ver
+               Cartoon
             </Typography>
           </div>
           <div>
