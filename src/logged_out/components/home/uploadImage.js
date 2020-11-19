@@ -116,7 +116,7 @@ class UploadImage extends Component {
         return (
             <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
                 <Typography variant="h3" align="center" className="lg-mg-bottom">
-                    Upload Zone
+                Upload Your Image !
           </Typography>
                 <div className={classNames("container-fluid", classes.containerFix)}>
                     <Card
@@ -173,14 +173,14 @@ class UploadImage extends Component {
                                 data-aos-delay="200"
 
                             >
-                                <div style={{ textAlign: 'center' }} >
+                                <div style={{ textAlign: 'left' }} >
 
                                     <Typography variant='h5' color='primary' >Tips to cosider for best results</Typography>
                                     <br />
                                     <ul style={{ padding: '0% 10%', marginTop: '0%' }}>
-                                        <li><Typography align='left' display='inline'> Tips to consider </Typography></li>
-                                        <li><Typography align='left' display='inline'>Tips to cosider</Typography></li>
-                                        <li> <Typography align='left' display='inline'>Tips to cosider</Typography></li>
+                                    <li><Typography align='left' display='inline'> Photo with only face</Typography></li>
+                                        <li><Typography align='left' display='inline'>No hair across your face or eyes</Typography></li>
+                                        <li> <Typography align='left' display='inline'>Look directly at the camera </Typography></li>
                                         <li><Typography align='left' display='inline'>Tips to cosider</Typography>  </li>
 
                                     </ul>
@@ -201,18 +201,36 @@ class UploadImage extends Component {
                                 <Box style={{ textAlign: 'center' }}>
 
                                     <ZoomImage
-                                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+                                        src={`${process.env.PUBLIC_URL}/images/logged_out/io.jpg`}
                                         className={classes.image}
                                         style={{ width: '100px', height: '100px' }}
                                         alt="header example"
                                     />
-                                    &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp;
 
                                     <ZoomImage
-                                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+                                        src={`${process.env.PUBLIC_URL}/images/logged_out/ib.jpg`}
                                         className={classes.image}
                                         style={{ width: '100px', height: '100px' }}
                                         alt="header example"
+                                    />
+                                    <br></br>
+                                    <ZoomImage
+                                        src={`${process.env.PUBLIC_URL}/images/logged_out/v2.png`}
+                                        className={classes.image}
+                                        style={{ width: '30px', height: '30px' }}
+                                        alt="header example"
+                                        align = "center"
+                                    />
+
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+
+                                    <ZoomImage
+                                        src={`${process.env.PUBLIC_URL}/images/logged_out/x2.png`}
+                                        className={classes.image}
+                                        style={{ width: '30px', height: '30px' }}
+                                        alt="header example"
+                                        align="center"
                                     />
 
                                 </Box>

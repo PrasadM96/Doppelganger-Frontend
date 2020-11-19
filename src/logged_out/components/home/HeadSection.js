@@ -124,7 +124,7 @@ function HeadSection(props) {
                         color="textSecondary"
                           variant={isWidthUp("lg", width) ? "h3" : "h4"}
                         >
-                          Find your lookalike cartoon character
+                          Find your best look-alike cartoon
                         </Typography>
                       </Box>
                       <div>
@@ -133,26 +133,32 @@ function HeadSection(props) {
                             variant={isWidthUp("lg", width) ? "h6" : "body1"}
                           
                           >
-                           Are you curious?
+                          Who is the famous cartoon character look-alike you ?
+                          Are you curious to find it ? 
                           </Typography>
                         </Box>
-                        <Button
-                          variant="contained"
-                          color="secondary"
-                          fullWidth
-                          className={classes.extraLargeButton}
-                          classes={{ label: classes.extraLargeButtonLabel }}
-                          href="https://github.com/dunky11/react-saas-template"
-                        >
-                          Download from GitHub
-                        </Button>
+                        
                       </div>
+                      <div>
+                        <Box mb={2}>
+                          <Typography
+                            align = "center"
+                            color="primary"
+                            variant={isWidthUp("lg", width) ? "h5" : "body1"}
+                          
+                          >
+                           Upload your photograph and enjoy with the result!
+                          </Typography>
+                        </Box>
+                        
+                      </div>
+
                     </Box>
                   </Grid>
                   <Hidden smDown>
                     <Grid item md={6}>
                       <ZoomImage
-                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+                        src={`${process.env.PUBLIC_URL}/images/logged_out/image1.jpg`}
                         className={classes.image}
                         alt="header example"
                       />
