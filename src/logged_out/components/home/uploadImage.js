@@ -156,7 +156,7 @@ class UploadImage extends Component {
                                                 src={this.state.files.preview}
                                                 className={classes.image}
                                                 style={{ width: '100%', height: '100%', objectFit: "cover" }}
-                                                alt="uploaded image"
+                                                alt="uploaded a image"
                                             />
                                         </div>
                                     }
